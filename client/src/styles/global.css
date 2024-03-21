@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  @apply bg-white text-black font-montserrat;
+  height: 100vh;
+  background: #F0F0F3;
+}
+
+button[type="submit"]{
+  @apply bg-[#2563EB] hover:bg-[#225cd7] text-white font-bold py-2 px-4 rounded-lg shadow-sm;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+  font-size: inherit;
+  font-weight: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #254287;
+  color: white;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  max-width: 200px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+h1 {
+  @apply font-bold text-4xl my-4;
+}
+
+h2 {
+  @apply font-bold text-3xl my-4;
+}
+
+h3 {
+  @apply font-bold text-2xl my-4;
+}
+
+h4 {
+  @apply font-bold text-xl my-4;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="password"]{
+  @apply border-gray-300 border-[1px] rounded p-1 bg-slate-50;
+}
