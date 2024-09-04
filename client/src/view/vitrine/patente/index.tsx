@@ -47,12 +47,12 @@ export function Patente() {
         api.get('/palavraChave').then(response => {
             setOptionPalavraChave(response.data);
         })
-    }, [])
+    }, [1])
     useEffect(() => {
         api.get('/patentes').then(response => {
             setPatente(response.data);
         })
-    }, [])
+    }, [1])
     if (busca == "todos") {
         return (
             <section>
