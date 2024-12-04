@@ -1,9 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { salvarCustomizacao, obterCustomizacao } from "../../../services/api";
 
 export function IndexPage() {
     const [selectedColor, setSelectedColor] = useState<string>('#2563EB'); // Cor padrão
     const [logo, setLogo] = useState<File | null>(null);
+
+    // Carregar configurações ao montar o componente
+    useEffect(() => {
+        const carregarCustomizacao = async () => {
+            try {
+                const config = await obterCustomizacao();
+                if (config) {
+                    setSelectedColor(config.cor_principal || '#2563EB');
+                }
+            } catch (error) {
+                console.error("Erro ao carregar customizações:", error);
+            }
+        };
+
+        carregarCustomizacao();
+    }, []);
 
     const handleColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedColor(e.target.value);
@@ -14,6 +31,18 @@ export function IndexPage() {
             setLogo(e.target.files[0]);
         }
     };
+
+    const handleSalvar = async () => {
+        try {
+            // Converta `logo` de `null` para `undefined`, se necessário
+            await salvarCustomizacao(selectedColor, "#ffffff", logo || undefined); 
+            alert("Configuração salva com sucesso!");
+        } catch (error) {
+            console.error("Erro ao salvar configuração:", error);
+            alert("Erro ao salvar. Tente novamente.");
+        }
+    };
+    
 
     return (
         <div className="flex flex-col h-screen bg-gray-100">
@@ -92,6 +121,14 @@ export function IndexPage() {
                                     </p>
                                 )}
                             </div>
+
+                            {/* Botão para salvar */}
+                            <button
+                                onClick={handleSalvar}
+                                className="bg-blue-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700"
+                            >
+                                Salvar Configuração
+                            </button>
                         </div>
                     </section>
                 </div>
