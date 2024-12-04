@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 export function MenuAdmin() {
     return (
         <section className="m-10 h-full text-gray-400">
@@ -10,10 +11,21 @@ export function MenuAdmin() {
                 </div>
                 <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5" />
                 <ul className="grid px-5 gap-y-4 ">
-                    <Link to="/admin/patentes">
+                <Link to="/admin/customizacao">
                         <div className="grid grid-flow-col-dense hover:shadow-3xl     hover:bg-gray-100 items-center text-left  shadow-lg rounded-md ">
                             <li>
                                 <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/pesquisas.svg" alt="" />
+                            </li>
+                            <li>
+                                <h1>Customizar</h1>
+                                <p>Alterar cores base e logos e informações da plataforma</p>
+                            </li>
+                        </div>
+                    </Link>
+                    <Link to="/admin/patentes">
+                        <div className="grid grid-flow-col-dense hover:shadow-3xl     hover:bg-gray-100 items-center text-left  shadow-lg rounded-md ">
+                            <li>
+                                <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/pesquisas.svg" alt="Pesquisas" />
                             </li>
                             <li>
                                 <h1>Administrador de patentes</h1>
@@ -24,7 +36,7 @@ export function MenuAdmin() {
                     <Link to="/admin/pesquisas">
                         <div className="grid grid-flow-col-dense hover:shadow-3xl  hover:bg-gray-100 items-center text-left  shadow-lg rounded-md ">
                             <li>
-                                <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/search.svg" alt="" />
+                                <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/search.svg" alt="Search" />
                             </li>
                             <li>
                                 <h1>Administrador de Pesquisas</h1>
@@ -35,7 +47,7 @@ export function MenuAdmin() {
                     <Link to="/admin/softwares">
                         <div className="grid grid-flow-col-dense hover:shadow-3xl     hover:bg-gray-100 items-center text-left  shadow-lg rounded-md ">
                             <li>
-                                <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/software.svg" alt="" />
+                                <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/software.svg" alt="Software" />
                             </li>
                             <li>
                                 <h1>Administrador de Softwares</h1>
@@ -46,7 +58,7 @@ export function MenuAdmin() {
                     <Link to="/admin/servicos">
                         <div className="grid grid-flow-col-dense hover:shadow-3xl     hover:bg-gray-100 items-center text-left  shadow-lg rounded-md ">
                             <li>
-                                <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/service.svg" alt="" />
+                                <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/service.svg" alt="Serviços" />
                             </li>
                             <li>
                                 <h1>Administrador de Serviços</h1>
@@ -57,7 +69,7 @@ export function MenuAdmin() {
                     <Link to="/admin/laboratorio">
                         <div className="grid grid-flow-col-dense hover:shadow-3xl     hover:bg-gray-100 items-center text-left  shadow-lg rounded-md ">
                             <li>
-                                <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/servicos.svg" alt="" />
+                                <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/servicos.svg" alt="Laboratórios" />
                             </li>
                             <li>
                                 <h1>Administrador de Laboratório</h1>
@@ -68,7 +80,7 @@ export function MenuAdmin() {
                     <Link to="/admin/startups">
                         <div className="grid grid-flow-col-dense hover:shadow-3xl     hover:bg-gray-100 items-center text-left  shadow-lg rounded-md ">
                             <li>
-                                <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/startups.svg" alt="" />
+                                <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/startups.svg" alt="Startups" />
                             </li>
                             <li>
                                 <h1>Administrador de Startups</h1>
@@ -79,7 +91,7 @@ export function MenuAdmin() {
                     <Link to="/admin/permissoes">
                         <div className="grid grid-flow-col-dense hover:shadow-3xl     hover:bg-gray-100 items-center text-left  shadow-lg rounded-md ">
                             <li>
-                                <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/permission.svg" alt="" />
+                                <img className="w-64 rounded-tl-md rounded-bl-md" src="assets/permission.svg" alt="Permissões" />
                             </li>
                             <li>
                                 <h1>Administrador de Permissões</h1>
